@@ -2,7 +2,6 @@
 QA Project 1, CRUD app
 
 Objectives: 
-
 To create a CRUD application with utilisation of supporting tools:
 
 1. Kanban board with full expansion
