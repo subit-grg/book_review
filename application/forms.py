@@ -19,6 +19,6 @@ class UserForm(FlaskForm):
 class ReviewForm(FlaskForm):
     book = StringField('Book', validators=[DataRequired()])
     book_review = TextAreaField('Review', validators=[DataRequired()])
-    review_date = DateField('Review Date', validators=[checkDateInFuture("Please choose a date in the future")])
+    review_date = DateField('Review Date', validators=[checkDateInFuture("Please choose a date in the past")])
     review_by = SelectField('Review by', choices=[])
     submit = SubmitField('Submit')
