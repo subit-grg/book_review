@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Book Review</title>
+    </head>
+    <body style="background-color:rgb(6, 199, 6); font-family:Arial, Helvetica, sans-serif;">
+        <h1>Book Review</h1>
+        <p> Leave a short review about your favourite book!</p>
+
+        
+        <a href = "{{ url_for('index') }}"> Home </a> | 
+        <a href = "{{ url_for('add_user') }}"> Add User </a> |
+        <a href = "{{ url_for('create_new_review') }}"> Add Review </a> |
+        <a href = "{{ url_for('view_all_users') }}"> User List </a> |
+        <a href = "{{ url_for('view_all_reviews') }}"> Review List </a>
+        <br>
+        <br>
+
+        {% block body %}
+        {% endblock body %}
+    </body>
+    
+</html>

@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>{{ entity }} List</h2>
+{% for review in reviews %}
+{{ review.__str__() }}  
+{% if entity == 'Review' %}
+Review by: {{ review.user.__str__() }}
+{% endif %}
+<br>
+{% endfor %}
+{% endblock body %}

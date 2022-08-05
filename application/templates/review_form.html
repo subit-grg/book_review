@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="Form">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.book.label }} <br> 
+        {{ form.book }}<br>
+        <br>
+        {{ form.book_review.label }} <br>
+        {{ form.book_review }}<br>
+        <br>
+        {{ form.review_date.label }} <br>
+        {{ form.review_date }}<br>
+        <br>
+        {{ form.review_by.label }} <br>
+        {{ form.review_by }}
+        <br>
+        <br>
+        {{ form.submit }}<br>
+
+    </form>
+</div>
+<div>
+    {% if errors %}
+    {% for error in errors %}
+    <p style="color:red;">{{ error }}</p>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock body %}
